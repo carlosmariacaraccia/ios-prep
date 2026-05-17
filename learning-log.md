@@ -1,9 +1,8 @@
-## Day 2 COW
-This is a concept I have to learn and review, the COW just lets me know 
-when a value type should be copied or not. This has to do with speed
-and efficiency, if the array has multiple copies and has not mutations
-then COW won't trigger, but if one of the instances has mutated, then
-we should not point to the same memory address and perform a copy of the type
-now we can mutate safely, without compromising the initial memory address
-A subscript was a concept I did not have in my mind too
-I never understood that it was a nicer notation to access and assign elements
+## Day 2
+Learing how to create my own hash map is really great
+I did not know how it worked or what to do with the collisions
+I understood that the hash is not useful without knowing the number of elements
+I understood what to do with the remainder operator.
+I also understood the concept of resizing and of reseting the count and what a 
+subscript is useful for.
+I'm really happy doing this example although I did not finished it in 1 day
