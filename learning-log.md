@@ -19,3 +19,11 @@ type will be done and then it will be passed along
 Every time we call the copy function then a collection will be re created
 The copy method lives in the custom data class (In this case the Buffer<Int>
 Then the custom class that triggers the if the object is not know to be uniquely referenced
+
+## Day 5
+Try not to remember what I have learned in the past to solve these exercises by hard, just read
+the problem and think it with a solution. Practice every single day. I should think in a simpler way
+learning about swift set's methods is also great. I need to prep every day and start a new challenge.
+I by myself solved the problem in an easier way, I need to start thinking about overflow issues and other
+constraints that might affect the viability or performance. I also need to stop using ai and 
+autocomplete. 
