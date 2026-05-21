@@ -43,3 +43,50 @@ print(containsDuplicate([-1, -2, -3, -1]))                   // expected: true
 
 // Large range, no duplicates
 print(containsDuplicate([100, -100, 50, -50, 0]))            // expected: false
+
+
+func twoSumBruteForce(_ intList: [Int], _ target: Int) -> [Int] {
+    guard intList.count > 1 else { return [] }
+    
+    var outerIndex = 0
+    var seenIndices = [Int]()
+    
+    while outerIndex < intList.count - 1 {
+        for movingIndex in (outerIndex + 1)...intList.count - 1 {
+            if intList[outerIndex] + intList[movingIndex] == target {
+                seenIndices.append(outerIndex)
+                seenIndices.append(movingIndex)
+            }
+        }
+        outerIndex += 1
+    }
+    
+    return seenIndices
+}
+
+func twoSum(_ intList: [Int], _ target: Int) -> [Int] {
+    guard intList.count > 1 else { return [] }
+    
+    // i will store the values that i have seen and the indices
+    var seenValues = Dictionary<Int, Int>()
+    
+    for index in 0..<intList.count {
+        let currentValue = intList[index]
+        let desiredValue = target - currentValue
+        if let indexOfDesiredValue = seenValues[desiredValue] {
+            return [indexOfDesiredValue, index]
+        } else {
+            seenValues[currentValue] = index
+        }
+    }
+    return []
+}
+
+
+print(twoSum([2, 7, 11, 15], 9))   // expected: [0, 1]  (2 + 7 = 9)
+print(twoSum([3, 2, 4], 6))        // expected: [1, 2]  (2 + 4 = 6)
+print(twoSum([3, 3], 6))           // expected: [0, 1]  (3 + 3 = 6)
+print(twoSum([1, 2, 3, 4, 5], 9))  // expected: [3, 4]  (4 + 5 = 9)
+print(twoSum([0, 4, 3, 0], 0))     // expected: [0, 3]  (0 + 0 = 0)
+print(twoSum([-3, 4, 3, 90], 0))   // expected: [0, 2]  (-3 + 3 = 0)
+
