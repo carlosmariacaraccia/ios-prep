@@ -27,3 +27,18 @@ learning about swift set's methods is also great. I need to prep every day and s
 I by myself solved the problem in an easier way, I need to start thinking about overflow issues and other
 constraints that might affect the viability or performance. I also need to stop using ai and 
 autocomplete. 
+
+## Day 6
+Solving the two sum algorithm was really great, I understood really well the memoizing concept and 
+when to cache their values. I was trying to remember how to solve it and that was my burden. Finally
+when I freed myself the problem was really clear and easy to understand and code. The fact that I could
+write the code like
+```swift
+  let currentValue = intList[currentIndex]
+  let desiredValue = target - currentValue
+  if let indexOfDesiredValue = seenValues[desiredValue] { // we found the value
+    return [indexOfDesiredValue, currentIndex]
+  } else { // we did not find the value, so we store it and its index
+    seenValues[currentValue] = currentIndex
+  }
+```
