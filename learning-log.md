@@ -42,3 +42,26 @@ write the code like
     seenValues[currentValue] = currentIndex
   }
 ```
+
+## Day 7
+Solving the anagrams problems in two different days was great too. Also having 2 resting days to learn between
+them was great too. To find is 2 words are anagrams I just have to go through then at the same time. This 
+means that they need to have the same number of letters, that gave me the initial conditions, then grabbing
+any of them I can create an index list and loop througth the words indices. Then the chars I see in word a
+should be added to a hash table and the ones i see from words b should be removed, if the values from the hash
+map are all 0 then we have an anagram. I tried to solve it by adding and seeing if the reminder is 0. But it
+did not work, because I was having order issues. Then I have to loop again through the values and see if 
+there any non 0.
+
+The syntax I learned from swift was to default hashmaps
+```swift
+dictionary['key', default:0] += 1
+```
+This means if there's no key (nil) then set the key and default value to 0
+
+The grouped anagrams was easier because I remembered a2d4f1, and that was the key I needed for the words to
+be see if they are anagrams. That was the hint claude gave to seek through the list. The I understood they
+that the key had to be lowercased and sorted for it to be all the same. So I only needed to sort the string.
+```swift
+let key = String("word".lowercased().sorted())
+```
