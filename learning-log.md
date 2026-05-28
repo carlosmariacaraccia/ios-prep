@@ -65,3 +65,19 @@ that the key had to be lowercased and sorted for it to be all the same. So I onl
 ```swift
 let key = String("word".lowercased().sorted())
 ```
+
+# Week 2
+
+## Day 1
+The concept
+
+static dispatch -> Compile Time -> Types **the dispatch is resolved by the static type of the reference**
+dinamic dispatch -> Run Time -> Instance **the dispatch resolves on the dynamic type of the instance**
+
+I understood that methods that are declared only in extensions are dispatched on the declared type,
+and that methods that are required (declared in the protocol body) dispatch on the concrete type (the instance).
+This might cause that a protocol to a call a method that's not intended.
+
+The exercise was to build 3 structs that conformed to a Drawable protocol that will calculate an area and they
+will have a description method that will be overriden. Description (the method) might be declared only as an extension
+or in the body of the protocol.
