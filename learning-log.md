@@ -81,3 +81,19 @@ This might cause that a protocol to a call a method that's not intended.
 The exercise was to build 3 structs that conformed to a Drawable protocol that will calculate an area and they
 will have a description method that will be overriden. Description (the method) might be declared only as an extension
 or in the body of the protocol.
+
+## Day 2
+**Topic:** PATs - protocols with associated type, associated types erasure
+**Read:** Swift Book - Generics with Associated Type
+**Built:** Container Protocol - Stack and Queue conforming to the Container Protocol. Hit the wall when 
+```swift
+let c: Container = Stack<Int>()
+c.append(1) did not compiled
+```
+**Clicked:** To understand if the compiler will hit a warning or not we need to undertand 3 clauses
+1) Is there an associated type in the protocol?
+2) Are we removing the biding tye erasing the reference to any? (Although we might have the binding in 
+the instance we are removing it from the reference) (let c: any Container = Stack<Int>())
+3) Does the requirement signature mentions the associated type? (append(Element))
+If these 3 clauses are Ok, then the code won't compile
+**Fuzzy:** I need to do some more excercises to have a deeper knowledge of this topic
