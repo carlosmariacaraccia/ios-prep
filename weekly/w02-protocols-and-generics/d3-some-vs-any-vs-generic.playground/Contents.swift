@@ -82,8 +82,12 @@ func makeAnyContainer() -> any Container {
 }
 
 
-var c = makeAnyContainer()
+var c = makeSomeContainer()
 c.count
 var a  = c[0]
+
+var things: [any Container] = [Stack<Int>(), Queue<Int>()]
+var new_things: [some Container] = [Stack<Int>(), Queue<Int>()]
+
 let sum = a! + 1
 if a == 1 { }
