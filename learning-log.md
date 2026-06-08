@@ -97,3 +97,15 @@ the instance we are removing it from the reference) (let c: any Container = Stac
 3) Does the requirement signature mentions the associated type? (append(Element))
 If these 3 clauses are Ok, then the code won't compile
 **Fuzzy:** I need to do some more excercises to have a deeper knowledge of this topic
+
+## Day 3
+**Topic:** any vs some vs generics
+**Built:** Stack / Queue conforming to Container. Then used protocols in 3 different ways
+**Clicked:** 
+I will be using **any** when I need an Heterogeneous Storage (i.e: an array with different types)
+I will be using **some** when I want to hide the type from the caller while the compiler still fixes it to 1 type.
+The binding is still there but it is hidden
+I will be using a **generic** when I want an homogeneous <C: Container> so the caller sets the type getting full read
+and write access to the associated type
+**Fuzzy:** This topic requires a lot of practice
+
