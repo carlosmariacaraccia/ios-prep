@@ -109,3 +109,9 @@ I will be using a **generic** when I want an homogeneous <C: Container> so the c
 and write access to the associated type
 **Fuzzy:** This topic requires a lot of practice
 
+## [06-17-2026] — Week 2 Day 4 (Project)
+**Topic:** Generic Result type from scratch — map, flatMap, mapError
+**Read:** Nothing to read
+**Built:** MyResult<Success, Failure: Error> enum with map, flatMap, mapError extensions
+**Clicked:** The structures where easier than what i thought
+**Fuzzy:** I just confused myself when I was using Self. instead of MyResult
