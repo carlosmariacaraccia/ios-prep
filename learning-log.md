@@ -119,7 +119,7 @@ and write access to the associated type
 ## [06-18-2026] — Week 2 Day 5 (Algo)
 **Pattern:** Two Pointers
 **Problems:**
-- Valid Palindrome (solved in X min)
+- Valid Palindrome (solved in 10 min)
 **Pattern signal:** This pattern is when i have to avoid cycling through a collection
   from both parts to save the nested loops. 
 **Key trick:** You move the indexes from the trailing and
@@ -127,7 +127,7 @@ and write access to the associated type
   trailing. You need to trim the string from special characters and white spaces and then
   to compare both chars
 **Mistakes:** Remember that swift strings are not index based they are String.Index based
-  and we should cycle through them using string.advance(by: ). If we use Array(String) then
+  and we should cycle through them using string.advance(_ :offsetBy:). If we use Array(String) then
   we access the [Character] and we can compare them individually
 **Time/Space:** O(n) / O(n) as written. The solution we reached is O(n) time and O(n) space
   We can optimize for O(1) space by avoiding the lowercasing and trimming the white spaces and
