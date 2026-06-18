@@ -115,3 +115,22 @@ and write access to the associated type
 **Built:** MyResult<Success, Failure: Error> enum with map, flatMap, mapError extensions
 **Clicked:** The structures where easier than what i thought
 **Fuzzy:** I just confused myself when I was using Self. instead of MyResult
+
+## [06-18-2026] — Week 2 Day 5 (Algo)
+**Pattern:** Two Pointers
+**Problems:**
+- Valid Palindrome (solved in X min)
+**Pattern signal:** This pattern is when i have to avoid cycling through a collection
+  from both parts to save the nested loops. 
+**Key trick:** You move the indexes from the trailing and
+  leading part of the collection, adding one to the leading and removing one from the
+  trailing. You need to trim the string from special characters and white spaces and then
+  to compare both chars
+**Mistakes:** Remember that swift strings are not index based they are String.Index based
+  and we should cycle through them using string.advance(by: ). If we use Array(String) then
+  we access the [Character] and we can compare them individually
+**Time/Space:** O(n) / O(n) as written. The solution we reached is O(n) time and O(n) space
+  We can optimize for O(1) space by avoiding the lowercasing and trimming the white spaces and
+  special chars in place. But that will make us deal with the String.Index based functions and
+  will remove the Int index based approach we did.
+  
